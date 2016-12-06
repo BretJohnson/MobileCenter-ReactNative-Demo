@@ -2,6 +2,10 @@
 #
 .DS_Store
 
+.vscode/
+tsconfig.json
+typings/
+
 # Xcode
 #
 build/
