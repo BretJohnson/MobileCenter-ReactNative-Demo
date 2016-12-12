@@ -5,6 +5,7 @@
 .vscode/
 tsconfig.json
 typings/
+jsconfig.json
 
 # Xcode
 #
