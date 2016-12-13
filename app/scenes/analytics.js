@@ -2,14 +2,26 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  Button
 } from 'react-native';
 
-export default class Analytics extends Component {
+import Analytics from "mobile-center-analytics";
+
+export default class AnalyticsScene extends Component {
+  sendTrackingEvent() {
+    Analytics.trackEvent('Custom Tracking event', {
+      sentTime: new Date().toString()
+    });
+  }
+
   render() {
     return (
       <View>
-        <Text>Analytics</Text>
+        <Button
+          title="Send Tracking event"
+          onPress={() => this.sendTrackingEvent()}
+          />
       </View>
     );
   }
